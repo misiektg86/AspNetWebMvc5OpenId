@@ -1,0 +1,75 @@
+﻿@using System.Configuration
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenId Connect Login</title>
+
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+            .login-container h2 {
+                margin-bottom: 20px;
+            }
+
+        .btn-custom {
+            margin-top: 10px;
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        .btn-azure-ad {
+            background-color: rgb(210, 38, 48); /* Custom color for Azure AD button */
+            color: white;
+            border: none;
+        }
+
+            .btn-azure-ad:hover {
+                background-color: rgb(180, 30, 40); /* Darker color on hover */
+            }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>OpenId Connect Login</h2>
+
+        <!-- Button to redirect to Azure AD login -->
+        <a href="/Account/SignInWithAzureAd" class="btn btn-azure-ad btn-custom">
+            Azure AD
+        </a>
+
+        <!-- Button to redirect to Azure B2C login -->
+        <a href="/Account/SignInWithAzureB2C" class="btn btn-secondary btn-custom">
+            Azure B2C
+        </a>
+    </div>
+
+    <!-- jQuery and Bootstrap JS from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
