@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Mvc5AuzreAd.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()

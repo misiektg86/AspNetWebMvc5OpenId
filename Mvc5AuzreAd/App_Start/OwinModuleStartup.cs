@@ -449,11 +449,6 @@ namespace Mvc5AuzreAd
                     return;
                 }
 
-                if (context.Request.Path.Value.ToLower().Contains("signalr") && !context.Request.User.Identity.IsAuthenticated)
-                {
-                    return;
-                }
-
                 var user = context.Authentication.User;
 
                 if (context.Request.Path.Value.ToLower() == "/account/postsignout")

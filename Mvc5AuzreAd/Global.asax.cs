@@ -17,5 +17,10 @@ namespace Mvc5AuzreAd
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Session_Start()
+        {
+            Session["Init"] = "Session started"; // Dummy value to initialize session
+        }
     }
 }
